@@ -1,0 +1,43 @@
+OUTRO EXERCICIO:
+
+1 - select nome, salario from clientes where salario > (select avg(salario) from clientes);
+      nome  salario
+0   Carlos     5800
+1  Daniela     3500
+
+2 - select nome, cidade from clientes where cidade like 'R%';
+      nome          cidade
+0    Bruno  Rio de Janeiro
+1  Eduardo          Recife
+
+3 - select nome, cidade, salario from clientes where salario between 2000 and 4000;
+      nome          cidade  salario
+0    Bruno  Rio de Janeiro     2300
+1  Daniela  Belo Horizonte     3500
+
+4 - select nome, idade from clientes where nome like '%a';
+      nome  idade
+0      Ana     30
+1  Daniela     35
+
+5 - select cidade, salario from clientes where salario > (select avg(salario) from clientes) order by salario limit 1;
+           cidade  salario
+0  Belo Horizonte     3500
+
+6 - select nome, cidade as cidade_nao_cadastrada from clientes where cidade is null;
+     nome cidade_nao_cadastrada
+0  Carlos                  None
+
+7 - select distinct salario from clientes;
+   salario
+0   1500.0
+1   2300.0
+2   5800.0
+3   3500.0
+4      NaN
+
+8 - select nome, salario from clientes where salario = (select min(salario) from clientes);
+  nome  salario
+0  Ana     1500
+
+9 - 
