@@ -1,4 +1,6 @@
-OUTRO EXERCICIO:
+## Esse documento foi feito para documentar as querys (consultas) feita, do banco teste feito por mim "bancodoido.py".
+
+Teste Banco de Dados:
 
 1 - select nome, salario from clientes where salario > (select avg(salario) from clientes);
       nome  salario
@@ -39,5 +41,3 @@ OUTRO EXERCICIO:
 8 - select nome, salario from clientes where salario = (select min(salario) from clientes);
   nome  salario
 0  Ana     1500
-
-9 - 
